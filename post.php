@@ -11,6 +11,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     );
 
     $query->execute([ $_POST['title'], $_POST['body'] ]);
+    
+    header("Refresh:0");
 }
 if ($_SERVER['REQUEST_METHOD'] === 'GET'){
     $path = __DIR__ . '/database/database.sqlite';
