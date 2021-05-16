@@ -1,0 +1,13 @@
+<?php 
+$nationalite = 'senegalaise' ;
+echo( 'Femme' .$nationalite) ;
+$situationmatrimoniale = 'celibataire' ;
+
+
+
+
+
+
+
+
+?>
