@@ -1,9 +1,12 @@
 <?php
 $connected = false;
+$error = false;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     if ( $_POST['user'] === 'admin' &&  $_POST['pasword'] === 'admin'){
         $connected= true;
+    }else{
+        $error = true;
     }
 }
 
@@ -37,6 +40,11 @@ if (!$connected){
         </form>
    
     ');
+    if ($error){
+        echo('
+            <em> Mot de passe ou login incorect</em>
+        ');
+    }
 }
 
 else{

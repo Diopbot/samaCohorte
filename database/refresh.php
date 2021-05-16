@@ -16,3 +16,21 @@ $query = $pdo->prepare(
                 )'
 );
 $query->execute();
+
+?>
+
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Sama Cohorte -- Supprimer database</title>
+</head>
+<body>
+    <h1>
+        Suppression réussit
+    </h1>
+    <p>
+        <a href="../post.php">Retour vers la page post</a>
+    </p>
+</body>
+</html>
