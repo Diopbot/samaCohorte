@@ -39,6 +39,19 @@ if (!$connected){
     ');
 }
 
+else{
+    echo('
+        <h1>
+            Supprimer tous les post
+        </h1>
+        <p>
+            <h3>
+                <a href="/database/refresh.php">Supprimer</a>
+            </h3>
+        </p>
+    ');
+}
+
 ?>
 
 
