@@ -1,3 +1,19 @@
+<?php
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+
+    $path = __DIR__ . '/database/database.sqlite';
+    $pdo = new PDO("sqlite:$path");
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    $query = $pdo->prepare(
+        'INSERT INTO posts (title, body) VALUES (?, ?)'
+    );
+
+    $query->execute([ $_POST['title'], $_POST['body'] ]);
+}
+
+?>
 <!doctype html>
 <html lang="fr">
 <head>
