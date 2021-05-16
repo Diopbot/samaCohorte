@@ -23,3 +23,4 @@ def Supermarket():
         print("La somme totale de la facture est : \n", Som)
 
     print("Merci d'avoir effectue vos achats !")    
+
