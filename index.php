@@ -6,9 +6,14 @@
 </head>
 <body>
 
+
 <?php
+/*
+Voici la partie du code PHP
+*/
 $txt = "PHP";
 echo "I love $txt!";
+echo "Papa Sidy DIENG, bienvenu dans ta page $txt!";
 ?>
 
 </body>
