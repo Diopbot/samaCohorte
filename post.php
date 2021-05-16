@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     );
 
     $query->execute([ $_POST['title'], $_POST['body'] ]);
-    
+
     header("Refresh:0");
 }
 if ($_SERVER['REQUEST_METHOD'] === 'GET'){
@@ -40,9 +40,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET'){
 
 <form method="post" action="">
     <p>
+        <span>Titre</span>
         <input name="title" type="text">
     </p>
     <p>
+        <span>body</span>
         <textarea name="body"></textarea>
     </p>
     <p>
@@ -60,12 +62,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET'){
     <ul>
         <?php foreach ($datas as $data): ?>
             <li>
-                titre : <?= $data['title'] ?>
-                body : <?= $data['body'] ?>
+                <strong>titre : </strong> <?= $data['title'] ?>
+                <strong>body : </strong> <?= $data['body'] ?>
             </li>
         <?php endforeach ?>
     </ul>
 </div>
+
+<p>
+    <h3>
+    Aller vers le <a href="admin.php">admin panel</a> pour supprimer les posts
+    </h3>
+
+</p>
 
 </body>
 </html>
